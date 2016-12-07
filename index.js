@@ -104,8 +104,12 @@ function parseInput(rplyToken, inputStr) {
 \n不要打成大寫D，不要逼我嗆你 \
 \n如果是CoC系的話，有初步支援cc擲骰了，獎懲骰也支援了。 \
 \n打運勢就可以招喚金屬阿狗幫你算命。 \
+\n早餐午餐晚餐可以招喚金屬阿狗來提供菜單\
 ';
         if (inputStr.match('金屬阿狗') != null) return randomReply() ;
+  if (inputStr.match('早餐') != null) return breakfast() ;
+  if (inputStr.match('午餐') != null) return randomReply() ;
+  if (inputStr.match('晚餐') != null) return randomReply() ;
   
   if (inputStr.match('運勢') != null) return Luck() ;
         
@@ -391,3 +395,21 @@ function Luck() {
           let rplyArr = ['大吉大利 恭喜你官司纏身', '中吉 這種不大也不小的東西感覺真是可憐', '小吉 阿不就好棒逆', '凶 吾夜觀天象 有一死兆星','大凶 我看妳印堂發黑 但你我有緣 這邊一份護身符就10元賣你','凶 血光之災 血光之災'];
           return rplyArr[Math.floor((Math.random() * (rplyArr.length)) + 0)];
         }
+
+function breakfast() {
+          let rplyArr = [
+            '\漢堡如何? \
+\n層層堆疊的厚實肉塊上有著融化的起司和爽脆的生菜',
+          '\三明治如何? \
+\n白軟的麵包中夾著一層層的生菜和火腿，清爽',
+          '\鐵板麵如何? \
+\n麵條上沾滿微辣的黑胡椒醬汁，肉片青菜隨意的點綴著',
+          '\小籠包如何? \
+\n剛好的一口大小可以輕鬆享用，火熱的肉汁一咬下就塞滿口中',
+          '\蛋餅如何? \
+\n就算只有蛋也很好吃，但如果可以的話就加上一點香氣四溢的培根，香甜的玉米，融化的牽絲起司',
+          '\飯糰如何? \
+\n滿滿的糯米裡面夾著肉鬆和鹹菜，口味多變又可以讓人充滿飽足'];
+          return rplyArr[Math.floor((Math.random() * (rplyArr.length)) + 0)];
+        }
+
