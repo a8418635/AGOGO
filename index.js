@@ -12,7 +12,7 @@ var options = {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer QJbCGemvU2iOz2kVnoyN7c2Gsln0880XZp3DCkui+9SUCYY3VoU/mTbBtJbv04gEVCs9i+I6BsYKK+QSlxfDIHPNn18dzFm2Iu9OE+om2UUObELcL5B0YVvlP1Xj+AokSStb3EjDQQCNWteeOkPE9wdB04t89/1O/w1cDnyilFU='
+    'Authorization': 'Bearer OHxP1u3UcmkAFBACkAMvI+k0QSSNXinCy1nYHKxAmAks3hdslDUpW+WIVQGFyRb8ts0XA6m3l5TyQWOpE3/vj1bmOvOaB85IyhKVR/daRkdTdkDLgXj84XEDurkh6EgjEfPY3CoQgCkyNxlv1rUkQQdB04t89/1O/w1cDnyilFU='
   
   }
 }
@@ -98,15 +98,15 @@ function parseInput(rplyToken, inputStr) {
           return isNaN(parseInt(obj));
         }                   
         //鴨霸獸指令開始於此
-        if (inputStr.match('機械阿狗') != null && inputStr.match('說明') != null) return randomReply() + '\n' + '\
+        if (inputStr.match('金屬阿狗') != null && inputStr.match('說明') != null) return randomReply() + '\n' + '\
 總之你要擲骰前就先打/r，後面接像是2d6，1d6+3，2d6+1d3之類的就好。  \
 \n要多筆輸出就是先空一格再打像是 *5 之類的。  \
 \n不要打成大寫D，不要逼我嗆你 \
 \n如果是CoC系的話，有初步支援cc擲骰了，獎懲骰也支援了。 \
 \n打運勢就可以招喚機械阿狗幫你算命。 \
-\n早餐午餐晚餐可以招喚機械阿狗來提供菜單\
+\n早餐午餐晚餐可以招喚金屬阿狗來提供菜單\
 ';
-        if (inputStr.match('機械阿狗') != null) return randomReply() ;
+        if (inputStr.match('金屬阿狗') != null) return randomReply() ;
   if (inputStr.match('早餐') != null) return breakfast() ;
   if (inputStr.match('午餐') != null) return lunch() ;
   if (inputStr.match('晚餐') != null) return dinner() ;
@@ -388,7 +388,7 @@ return countStr;
 
 
         function randomReply() {
-          let rplyArr = ['87不要亂玩。', '機械阿狗說你好 你好87', '\n就說了不要隨便叫我。', '\n請不要說話拜偷','你知道在非洲每一分鐘就會有一個87招喚機械阿狗嗎?','據說隔壁澳洲有人在拔嘴'];
+          let rplyArr = ['87不要亂玩。', '金屬阿狗說你好 你好87', '\n就說了不要隨便叫我。', '\n請不要說話拜偷','你知道在非洲每一分鐘就會有一個87招喚金屬阿狗嗎?','據說隔壁澳洲有人在拔嘴'];
           return rplyArr[Math.floor((Math.random() * (rplyArr.length)) + 0)];
         }
 function Luck() {
