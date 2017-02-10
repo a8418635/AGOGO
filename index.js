@@ -107,11 +107,11 @@ function parseInput(rplyToken, inputStr) {
 \n早餐午餐晚餐可以招喚金屬阿狗來提供菜單\
 ';
         if (inputStr.match('金屬阿狗') != null) return randomReply() ;
-  if (inputStr.match('早餐') != null) return breakfast() ;
-  if (inputStr.match('午餐') != null) return lunch() ;
-  if (inputStr.match('晚餐') != null) return dinner() ;
+   if (trigger == '早餐')return breakfast() ;
+ if (trigger == '午餐') return lunch() ;
+  if (trigger == '晚餐') return dinner() ;
   
-  if (inputStr.match('運勢') != null) return Luck() ;
+  if (trigger == '運勢')return Luck() ;
         
         //cc指令開始於此
         if (inputStr.split('=')[0] == 'cc<') 
