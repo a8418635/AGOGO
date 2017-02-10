@@ -274,13 +274,13 @@ function ArrMax (Arr){
 
         function MutiRollDice(DiceToCal,timesNum,text){
           let cuntSplitor = '+';
-          let comSplitor = 'd';
+          let comSplitor = 'd' or 'D';
           let CuntArr = DiceToCal.split(cuntSplitor);
           let numMax = CuntArr.length - 1 ; //設定要做的加法的大次數
 
           var count = 0;
           let countStr = '';
-          if (DiceToCal.match('D') != null) return randomReply() + '\n格式錯啦，d要小寫！';
+          if (DiceToCal.match('') != null) return randomReply() + '\n格式錯啦，d要小寫！';
 
           if (text == null) {
             for (let j = 1 ; j <= timesNum ; j++){
