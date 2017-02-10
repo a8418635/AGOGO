@@ -287,22 +287,28 @@ function ArrMax (Arr){
             for (let j = 1 ; j <= timesNum ; j++){
               count = 0;
               for (let i = 0; i <= numMax; i++) {
-                let cutArr = CuntArr[i].split(cutSplitor);
-                if (cutArr.length>=2){
-                let cut1=cutArr[0];
-                let cut2=cutArr[1];
-                if (cut2>0){cut2=-cut2}
-                }
-                else{
-                let cut1=cutArr[0];
-                 if (cut1>0){cut1=-cut1}
-                }
+                
                 }
                 let commandArr = CuntArr[i].split(comSplitor);
                 let countOfNum = commandArr[0];
                 let randomRange = commandArr[1];
                 if (randomRange == null) {
-                  let temp = parseInt(countOfNum);
+                  for(let o = 0; o<=1;o++){
+                  let cutArr = CuntArr[i].split(cutSplitor);
+                if (cutArr.length>=2){
+                let cut1=cutArr[0];
+                let cut2=cutArr[1];
+                if (cut2>0){let cut3=-cut2;
+                           let temp = parseInt(cut3);}
+                }
+                else{
+                let cut1=cutArr[0];
+                 if (cut1>0){let cut3=-cut1
+                            let temp = parseInt(cut3);}
+                }
+                  }
+               
+                  
                   //countStr = countStr + temp + '+';
                   count += temp; 
                 }
@@ -330,7 +336,21 @@ function ArrMax (Arr){
                 let countOfNum = commandArr[0];
                 let randomRange = commandArr[1];
                 if (randomRange == null) {
-                  let temp = parseInt(countOfNum);
+                  for(let o = 0; o<=1;o++){
+                  let cutArr = CuntArr[i].split(cutSplitor);
+                if (cutArr.length>=2){
+                let cut1=cutArr[0];
+                let cut2=cutArr[1];
+                if (cut2>0){let cut3=-cut2;
+                           let temp = parseInt(cut3);}
+                }
+                else{
+                let cut1=cutArr[0];
+                 if (cut1>0){let cut3=-cut1
+                            let temp = parseInt(cut3);}
+                }
+                  }
+                 
                   //countStr = countStr + temp + '+';
                   count += temp; 
                 }
