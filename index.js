@@ -394,7 +394,7 @@ function NomalRollDice(DiceToCal,text){
                 let cut1=cutArr[0];
                  if (cut1>0){cut1=-cut1}
                 }
-                }
+                
       let commandArr = CuntArr[i].split(comSplitor);
       let countOfNum = commandArr[0];
       let randomRange = commandArr[1];
