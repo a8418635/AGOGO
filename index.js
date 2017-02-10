@@ -337,18 +337,21 @@ function ArrMax (Arr){
                 if (randomRange == null) {
                   for(let o = 0; o<=1;o++){
                   let cutArr = CuntArr[i].split(cutSplitor);
-                if (cutArr.length>=2){
-                let cut1=cutArr[0];
-                let cut2=cutArr[1];
-                if (cut2>0){let cut3=-cut2;
-                           let temp = parseInt( );}
-                }
+                   if (cutArr.length>=2){
+                    let cut1=cutArr[0];
+                    let cut2=cutArr[1];
+                    if (cut2>0){
+                      let cut3=-cut2;
+                      let temp = parseInt(cut3);}
+                                                    }
                 else{
                 let cut1=cutArr[0];
-                 if (cut1>0){let cut4=-cut1;
-                            let temp = parseInt(cut4);}
-                }
+                 if (cut1>0){
+                   let cut4=-cut1;
+                   let temp = parseInt(cut4);}
+                                                }
                   }
+                }
                  
                   //countStr = countStr + temp + '+';
                   count += temp; 
