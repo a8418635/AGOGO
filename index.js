@@ -304,7 +304,7 @@ function ArrMax (Arr){
                 let cut1=cutArr[0];
                  if (cut1>0){let cut4=-cut1;
                             let temp = parseInt(cut4);}
-                }
+                
                   
                
                   
@@ -351,7 +351,7 @@ function ArrMax (Arr){
                    let temp = parseInt(cut4);}
                                                 }
                   }
-                }
+                
                  
                   //countStr = countStr + temp + '+';
                   count += temp; 
@@ -404,7 +404,7 @@ function NomalRollDice(DiceToCal,text){
                    let temp = parseInt(cut4);}
                                                 }
                   }
-                }
+                
         countStr = countStr + temp + '+';
         count += temp; 
        }
