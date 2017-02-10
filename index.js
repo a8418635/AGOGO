@@ -163,7 +163,7 @@ function parseInput(rplyToken, inputStr) {
         }
         
         
-        if (trigger != 'roll') return null;
+        if (trigger != '/r') return null;
         
       }
 
@@ -273,7 +273,8 @@ function ArrMax (Arr){
         
 
         function MutiRollDice(DiceToCal,timesNum,text){
-          let cuntSplitor = '+';
+          let cutSplitor = '-' ;       
+          let cuntSplitor = '+' ;
           let comSplitor = 'd' ;
           let CuntArr = DiceToCal.split(cuntSplitor);
           let numMax = CuntArr.length - 1 ; //設定要做的加法的大次數
@@ -286,7 +287,10 @@ function ArrMax (Arr){
             for (let j = 1 ; j <= timesNum ; j++){
               count = 0;
               for (let i = 0; i <= numMax; i++) {
-
+                let cutArr = CuntArr[i].split(cutSplitor);
+                let cut1=cutArr[0];
+                let cut2=cutArr[1];
+                if (cut2>0){cut2 = -cut2}
                 let commandArr = CuntArr[i].split(comSplitor);
                 let countOfNum = commandArr[0];
                 let randomRange = commandArr[1];
@@ -341,6 +345,7 @@ function ArrMax (Arr){
         
         
 function NomalRollDice(DiceToCal,text){
+   let cutSplitor = '-' ;   
     let cuntSplitor = '+';
     let comSplitor = 'd';
     let CuntArr = DiceToCal.split(cuntSplitor);
@@ -350,7 +355,10 @@ function NomalRollDice(DiceToCal,text){
     let countStr = '';
   if (DiceToCal.match('D') != null) return randomReply() + '\n格式錯啦，d要小寫！';
     for (let i = 0; i <= numMax; i++) {
-      
+       let cutArr = CuntArr[i].split(cutSplitor);
+                let cut1=cutArr[0];
+                let cut2=cutArr[1];
+                if (cut2>0){cut2 = -cut2}
       let commandArr = CuntArr[i].split(comSplitor);
       let countOfNum = commandArr[0];
       let randomRange = commandArr[1];
