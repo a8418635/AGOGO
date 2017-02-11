@@ -286,6 +286,7 @@ function ArrMax (Arr){
             for (let j = 1 ; j <= timesNum ; j++){
               count = 0;
               for (let i = 0; i <= numMax; i++) {
+               
 
                 let commandArr = CuntArr[i].split(comSplitor);
                 let countOfNum = commandArr[0];
@@ -341,6 +342,7 @@ function ArrMax (Arr){
         
         
 function NomalRollDice(DiceToCal,text){
+    let cutSplitor ='-';
     let cuntSplitor = '+';
     let comSplitor = 'd';
     let CuntArr = DiceToCal.split(cuntSplitor);
@@ -350,14 +352,23 @@ function NomalRollDice(DiceToCal,text){
     let countStr = '';
   if (DiceToCal.match('D') != null) return randomReply() + '\n格式錯啦，d要小寫！';
     for (let i = 0; i <= numMax; i++) {
-      
-      let commandArr = CuntArr[i].split(comSplitor);
-      let countOfNum = commandArr[0];
-      let randomRange = commandArr[1];
-      if (randomRange == null) {
-        let temp = parseInt(countOfNum);
-        countStr = countStr + temp + '+';
-        count += temp; 
+      let cutArr = CuntArr[i].split(cutSplitor);      
+      let cutMax = cutArr.length;
+      if(cutMax>=2){
+        let cut1= cutArr[1];
+        if(cut1 > 0){
+          let cut2=0-cut1;
+          let temp = parseInt(cut2) 
+           }}
+      else{
+        for (let o ==0; o <= cutMax; o++){
+        let commandArr = cutArr[o].split(comSplitor);
+        let countOfNum = commandArr[0];
+        let randomRange = commandArr[1];
+        if (randomRange == null) {
+          let temp = parseInt(countOfNum);
+          countStr = countStr + temp + '+';
+          count += temp; 
        }
        else{
           
@@ -365,9 +376,11 @@ function NomalRollDice(DiceToCal,text){
           let temp = Dice(randomRange);
           countStr = countStr + temp + '+';
           count += temp; 
-        }      }
+        }      
+       }
+        }
     }
-  
+    }
     
   if (countStr.split(cuntSplitor).length == 2) {
     if (text == null ) countStr = count;
