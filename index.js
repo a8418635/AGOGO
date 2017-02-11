@@ -358,7 +358,7 @@ function NomalRollDice(DiceToCal,text){
         let cut1= cutArr[1];
         if(cut1 > 0){
           let cut2=0-cut1;
-          let temp = parseInt(cut2) 
+          let temp = parseInt(cut2);
            }}
       else{
         for (let o ==0; o <= cutMax; o++){
